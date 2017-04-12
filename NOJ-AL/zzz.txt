@@ -1,0 +1,16 @@
+HW1
+1320 Problem  A		Sum of Numbers
+1321 Problem  B		Fighting strength vs Equipment
+1322 Problem  C		Combining sorting methold
+1324 Problem  D		Towers of Hanoi
+HW2
+1334 Problem  A		Sort and count
+1331 Problem  B		n皇后
+1333 Problem  C		导弹系统
+1332 Problem  D		Quicksort
+1335 Problem  E		ACCELERATED HEAPSORT
+HW3
+1339 Problem  A		selection problem
+1340 Problem  B		Merge Intervals
+1341 Problem  C		Longest Chain
+1342 Problem  D		二元关系的基本性质
