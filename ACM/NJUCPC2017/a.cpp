@@ -3,7 +3,7 @@
 using namespace std;
 #define D(x) cout<<#x<<"="<<x<<endl;
 
-int main()
+int main(int argc, char const *argv[])
 {
 	ios::sync_with_stdio(false);
 	int t = 0;
