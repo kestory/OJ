@@ -26,19 +26,21 @@ The longest chain in the sample: 4->1->2->3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 似乎有点暴力哈，尤其最后过与不过就是看MAX够不够大。。
 把思路理清那就下表全转换为从0开始，找出所有chain中最长的即可，总感觉可以用并查集哎
+可怜我之前都一直不知道动态数组。。终于不要傻傻的用一个超大的MAX了。。
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #include <iostream>
 using namespace std;
-#define MAX 100000
+//#define MAX 100000
 struct Node {
 	int num;
 	struct Node *next;
 };
 
 int main(int argc, char *argv[]) {
+	ios::sync_with_stdio(false);
 	int n = 0;
 	cin >> n;
-	Node chain[MAX];
+	Node *chain = new Node[n]; //Node chain[MAX];
 	int k = 0;
 	for (int i = 0; i < n; ++i) {
 		cin >> k;
@@ -48,7 +50,7 @@ int main(int argc, char *argv[]) {
 		else
 			chain[i].next = &chain[k];
 	}
-	int len[MAX];
+	int *len = new int[n]; //int len[MAX];
 	for (int i = 0; i < n; ++i) {
 		Node *p = &chain[i];
 		int get_len = 0;
