@@ -48,23 +48,22 @@ int main(int argc, char *argv[]) {
 	//int num=edges<<1;
 	vector<int> v;
 	int x, y;
-	int a[1024];//the_in-degree_of_each_vertex
-	int b[1024];//which_vertex_was_in
-	//int h[1024];//height
-	memset(a, -1, sizeof(a));
-	memset(b, -1, sizeof(b));
-	//memset(h, 0, sizeof(h));
+	//int a[1024];//the_in-degree_of_each_vertex
+	//int b[1024];//which_vertex_was_in
+	vector<int> a(1024, -1); //the_in-degree_of_each_vertex
+	vector<int> b(1024, -1); //which_vertex_was_in
+	/*I think use vector will be rubost*/
+	//memset(a, -1, sizeof(a));
+	//memset(b, -1, sizeof(b));
+
 	Node chain[1024];
 	int len[1024];
+
 	for (int i = 0; i < edges; ++i) {
 		cin >> x >> y;
 		v.push_back(x);
 		v.push_back(y);
-		//if (h[y] == 0)
-		//	h[x] = 1;
-		//h[x] += h[y];
 
-		//if (find(v.begin(), v.end(), y) != v.end())
 		if (b[y] == -1)//before find y
 			chain[y].next = NULL;
 		chain[x].next = &chain[y];
@@ -76,7 +75,7 @@ int main(int argc, char *argv[]) {
 		b[x] = 0;
 		b[y] = 0;
 	}
-	int m = *max_element(v.begin(), v.end()) + 1;
+	int m = *max_element(v.begin(), v.end()) + 1;//+1 for the print, with nothing to do with the result
 	/*
 	for (int i = 0; i < m; ++i)
 		cout << h[i] << " ";
@@ -105,7 +104,7 @@ int main(int argc, char *argv[]) {
 		if (a[i] > 1)
 			condition2 = false;
 	int max = -1;
-	if (condition1 && condition2) {
+	if (condition1 && condition2) {//calculate the height when need(1&&2)
 		for (int i = 0; i < m; ++i) {
 			Node *p = &chain[i];
 			int get_len = 0;
@@ -121,15 +120,12 @@ int main(int argc, char *argv[]) {
 
 	}
 
-
-
 	if (condition1 && condition2)
 		cout << "tree " << max;
 	else if (condition1)
 		cout << "not tree 2";
 	else
 		cout << "not tree 1";
-
 
 	return 0;
 }
