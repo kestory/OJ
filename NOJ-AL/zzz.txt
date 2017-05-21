@@ -15,6 +15,6 @@ HW3
 1341 Problem  C		Longest Chain
 1342 Problem  D		二元关系的基本性质
 HW4
-1385 Problem  A	有向树
-1386 Problem  B	Strongly Connected Components
-1387 Problem  C	Biconnected Components
+1385 Problem  A		有向树
+1386 Problem  B		Strongly Connected Components
+1387 Problem  C		Biconnected Components
