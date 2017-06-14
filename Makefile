@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "HW-1"
+	git commit -m "HW-5.2"
 	git push
