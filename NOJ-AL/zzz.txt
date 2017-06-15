@@ -18,3 +18,7 @@ HW4
 1385 Problem  A		有向树
 1386 Problem  B		Strongly Connected Components
 1387 Problem  C		Biconnected Components
+HW5
+1389 Problem  A		牛棚1	
+1390 Problem  B		SubsetSum
+1391 Problem  C		牛棚2
