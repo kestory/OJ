@@ -8,7 +8,8 @@ Farmer John想将他购买的木板总长度减到最少。
 
 Input
 
-给出:可能买到的木板最大的数目M(1<= M<=50);牛棚的总数S(1<= S<=200); 牛棚里牛的总数C(1 <= C <=S);和牛所在的牛棚的编号stall_number(1 <= stall_number <= S)（共C行）
+给出:可能买到的木板最大的数目M(1<= M<=50);牛棚的总数S(1<= S<=200); 牛棚里牛的总数C(1 <= C <=S);
+和牛所在的牛棚的编号stall_number(1 <= stall_number <= S)（共C行）
 
 Output
 
