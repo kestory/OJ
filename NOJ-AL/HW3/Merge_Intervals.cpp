@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
 	//for (int i = 0; i < n; ++i)	cout<<l[i]<<"\t";cout<<endl;
 	//for (int i = 0; i < n; ++i)	cout<<r[i]<<"\t";cout<<endl;
 	sort(l, l + n, cmp);//我先排了序，就是把包含关系变成交错关系
-	sort(r, r + n, cmp);
+	sort(r, r + n, cmp);//排序后再观之，不影响结果
 	//for (int i = 0; i < n; ++i)	cout << l[i] << "\t"; cout << endl;
 	//for (int i = 0; i < n; ++i)	cout << r[i] << "\t"; cout << endl;
 	int in;

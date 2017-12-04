@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "What do you think OJ means ^ ^"
+	git commit -m "模版"
 	git push
