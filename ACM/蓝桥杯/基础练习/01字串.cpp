@@ -1,12 +1,14 @@
 #include <iostream>
 #include <string>
 using namespace std;
+const int n = 4;//01234
+const int N = 32;//2^5
 int main( ) {//算法课里二进制计数器的平摊分析
-	string wu[32];
-	for (int i = 0; i < 32; ++i) {
-		wu[i] = "00000";
+	string wu[N];
+	for (int i = 0; i < N; ++i) {
+		wu[i] = "00000";//need change if >5
 	}
-
+	/*
 	for (int i = 1; i < 32; i += 2)
 		wu[i][4] = '1';
 	for (int i = 2; i < 32; i += 4) {
@@ -22,13 +24,21 @@ int main( ) {//算法课里二进制计数器的平摊分析
 	for (int i = 16; i < 32; i += 32)
 		for (int j = 0; j < 16; ++j)
 			wu[i + j][0] = '1';
+	*/
+	for (int x = 1, y = 0; x < N ; x *= 2, y++)//必要的拓展，为了5位以上
+	{
+		for (int i = x; i < N; i += x * 2)
+			for (int j = 0; j < x; ++j)
+				wu[i + j][n - y] = '1';
+	}
 
-	for (int i = 0; i < 32; i++) {
+	for (int i = 0; i < N; i++) {
 		cout << wu[i] << endl;
 	}
 	return 0;
 }
 //char[][]似乎有问题
+
 //5层循环
 #include <iostream>
 using namespace std;
@@ -42,6 +52,7 @@ int main() {
 					}
 	return 0;
 }
+
 //模拟二进制自增
 #include <iostream>
 using namespace std;
