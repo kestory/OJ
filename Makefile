@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m “蓝桥杯－basis”
+	git commit -m “总判断数一样一样的”
 	git push
