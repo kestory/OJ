@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "Python Introduction"
+	git commit -m "move lanqiao out"
 	git push
